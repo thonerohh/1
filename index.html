@@ -32,6 +32,14 @@
       .answer .link {
         margin: 0;
       }
+      .back{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
     </style>
     <form class="block" onsubmit="event.preventDefault()" method="GET">
       <h2>Какие жанры игры вы предпочитаете?</h2>
@@ -39,46 +47,55 @@
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой возраст?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какая платформа?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой бюджет?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какие игры Вам понравились?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Уровень сложности?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Нужна сетевая игра?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какие игры в тренде пользователей?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Ограничения компьютера по мощности?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNext(this)">
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
+      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Новые или старые игры?</h2>
       <input type="text" name="" id="" required>
       <input type="submit" value="Ответить" onclick="openNextGenerate(this)">
@@ -90,6 +107,10 @@
       function openNext(el) {
         el.parentNode.classList.add('hidden');
         el.parentNode.nextElementSibling.classList.remove('hidden');
+      }
+      function openPrevious(el) {
+        el.parentNode.classList.add('hidden');
+        el.parentNode.previousElementSibling.classList.remove('hidden');
       }
       
 // Super Mario Galaxy 2
