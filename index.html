@@ -25,6 +25,62 @@
         flex-direction: column;
         align-items: center;
       }
+      .block0 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .block0 div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .block00 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .block00 div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .block0 div button {
+        margin-top: 10px;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color: #1c1c1c;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .block0 div button:hover {
+        background-color: #2c2c2c;
+      }
+      .block0 div img {
+        width: 150px;
+        height: 150px;
+      }
+      .block00 div button {
+        margin-top: 10px;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color: #1c1c1c;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .block00 div button:hover {
+        background-color: #2c2c2c;
+      }
+      .block00 div img {
+        width: 150px;
+        height: 150px;
+      }
       .block1 div button {
         margin-top: 10px;
         width: 150px;
@@ -131,8 +187,27 @@
 
     </style>
     <h1>Выберите игру</h1>
-
-    <div class="block1">
+    <div class="block0">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/105/105620.png" alt="">
+        <button onclick="openNext('01')">Мальчик</button>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/105/105636.png" alt="">
+        <button onclick="openNext('02')">Девочка</button>
+      </div>
+    </div>
+    <div class="block00 hidden">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3508/3508234.png" alt="">
+        <button onclick="openNext('001')">Младше 18</button>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/6940/6940311.png" alt="">
+        <button onclick="openNext('002')">18+</button>
+      </div>
+    </div>
+    <div class="block1 hidden">
       <div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW7BjXJ8z5y2u-7GsjYsfKM8q7beBEwVmIhlbBnG2k7w&s" alt="">
         <button onclick="openNext('11')">Локальная игра</button>
@@ -288,6 +363,22 @@
     <script>
       //create quiz openNext function
       function openNext(id) {
+        if(id == '01') {
+          document.querySelector('.block00').classList.remove('hidden');
+          document.querySelector('.block0').classList.add('hidden');
+        }
+        if(id == '02') {
+          document.querySelector('.block00').classList.remove('hidden');
+          document.querySelector('.block0').classList.add('hidden');
+        }
+        if(id == '001') {
+          document.querySelector('.block1').classList.remove('hidden');
+          document.querySelector('.block00').classList.add('hidden');
+        }
+        if(id == '002') {
+          document.querySelector('.block1').classList.remove('hidden');
+          document.querySelector('.block00').classList.add('hidden');
+        }
         if(id == '11') {
           document.querySelector('.block11').classList.remove('hidden');
           document.querySelector('.block1').classList.add('hidden');
