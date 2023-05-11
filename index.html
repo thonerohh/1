@@ -1,522 +1,164 @@
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  </head>
   <body>
     <style>
-      .hidden {
-        display: none !important;
-      }
-      body {
-        background-color: #fff;
-        color: #111;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      h1 {
-        text-align: center;
-      }
-      .block1 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .block1 div {
+      .block {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
-      .block0 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+      .block.hidden {
+        display: none;
       }
-      .block0 div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .block00 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .block00 div {
+      .answer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
-      .block0 div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
+      .answer.hidden {
+        display: none;
       }
-      .block0 div button:hover {
-        background-color: #2c2c2c;
+      .answer .image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
       }
-      .block0 div img {
-        width: 150px;
-        height: 150px;
+      .answer .title {
+        margin: 0;
       }
-      .block00 div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
+      .answer .link {
+        margin: 0;
       }
-      .block00 div button:hover {
-        background-color: #2c2c2c;
-      }
-      .block00 div img {
-        width: 150px;
-        height: 150px;
-      }
-      .block1 div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .block1 div button:hover {
-        background-color: #2c2c2c;
-      }
-      .block1 div img {
-        width: 150px;
-        height: 150px;
-      }
-      .block11 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .block11 div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .block11 div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .block11 div button:hover {
-        background-color: #2c2c2c;
-      }
-      .block11 div img {
-        width: 150px;
-        height: 150px;
-      }
-      .block12 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .block12 div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .block12 div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .block12 div button:hover {
-        background-color: #2c2c2c;
-      }
-      .block12 div img {
-        width: 150px;
-        height: 150px;
-      }
-      .blocklast{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .blocklast div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .blocklast div button {
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: #1c1c1c;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .blocklast div button:hover {
-        background-color: #2c2c2c;
-      }
-      .blocklast div img {
-        width: 150px;
-        height: 150px;
-      }
-
-
     </style>
-    <h1>Выберите игру</h1>
-    <div class="block0">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/105/105620.png" alt="">
-        <button onclick="openNext('01')">Мальчик</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/105/105636.png" alt="">
-        <button onclick="openNext('02')">Девочка</button>
-      </div>
-    </div>
-    <div class="block00 hidden">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/3508/3508234.png" alt="">
-        <button onclick="openNext('001')">Младше 18</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/6940/6940311.png" alt="">
-        <button onclick="openNext('002')">18+</button>
-      </div>
-    </div>
-    <div class="block1 hidden">
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW7BjXJ8z5y2u-7GsjYsfKM8q7beBEwVmIhlbBnG2k7w&s" alt="">
-        <button onclick="openNext('11')">Локальная игра</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/2734/2734724.png" alt="">
-        <button onclick="openNext('12')">Мультиплеер</button>
-      </div>
-    </div>
-
-    <div class="block11 hidden">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/6577/6577645.png" alt="">
-        <button onclick="openNext('111')">Сильный компьютер</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/1616/1616499.png" alt="">
-        <button onclick="openNext('112')">Слабый компьютер</button>
-      </div>
-    </div>
-    <div class="block12 hidden">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/6577/6577645.png" alt="">
-        <button onclick="openNext('121')">Сильный компьютер</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/1616/1616499.png" alt="">
-        <button onclick="openNext('122')">Слабый компьютер</button>
-      </div>
-    </div>
-
-    <div class="block111 blocklast hidden">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/125/125842.png" alt="">
-        <button onclick="openNext('1111')">Стратегия</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/2152/2152214.png" alt="">
-        <button onclick="openNext('1112')">Симулятор</button>
-      </div>
-    </div>
-    <div class="block112 blocklast hidden">
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/119/119702.png" alt="">
-        <button onclick="openNext('1121')">РПГ</button>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios/512/action.png" alt="">
-        <button onclick="openNext('1122')">Экшн</button>
-      </div>
-    </div>
-    <div class="block121 blocklast hidden">
-      <div>
-        <img src="https://img.icons8.com/ios/512/action.png" alt="">
-        <button onclick="openNext('1211')">Экшн</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/125/125842.png" alt="">
-        <button onclick="openNext('1212')">Стратегия</button>
-      </div>
-    </div>
-    <div class="block122 blocklast hidden">
-      <div>
-        <img src="https://img.icons8.com/ios/512/action.png" alt="">
-        <button onclick="openNext('1221')">Экшн</button>
-      </div>
-      <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/3069/3069052.png" alt="">
-        <button onclick="openNext('1222')">Турнирная</button>
-      </div>
-    </div>
-
-    <div class="block1111 blocklast hidden">
-      <div>
-        <img src="https://cdn.2kgames.com/civilization.com/Beginners_Civ_hero.jpg" alt="">
-        <button onclick="openNext('11111')">Civilization</button>
-      </div>
-      <div>
-        <img src="https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2017/01/c-simcity-buildit-scbi-game-splash.jpg.adapt.crop191x100.1200w.jpg" alt="">
-        <button onclick="openNext('11112')">SimCity</button>
-      </div>
-    </div>
-    <div class="block1112 blocklast hidden">
-      <div>
-        <img src="https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg" alt="">
-        <button onclick="openNext('11121')">Minecraft</button>
-      </div>
-      <div>
-        <img src="https://cdn2.unrealengine.com/egs-thesims4-electronicarts-g1a-00-1920x1080-acc697b40374.jpg?h=270&quality=medium&resize=1&w=480" alt="">
-        <button onclick="openNext('11122')">Sims</button>
-      </div>
-    </div>
-    <div class="block1121 blocklast hidden">
-      <div>
-        <img src="https://img.championat.com/news/big/r/o/iznachalno-remejk-final-fantasy-7-dolzhen-byl-vyjti-v-dvuh-chastyah_1657459419101367008.jpg" alt="">
-        <button onclick="openNext('11211')">Final Fantasy</button>
-      </div>
-      <div>
-        <img src="https://upload.wikimedia.org/wikipedia/ru/a/a2/The_Witcher_3-_Wild_Hunt_Cover.jpg" alt="">
-        <button onclick="openNext('11212')">Ведьмак</button>
-      </div>
-    </div>
-    <div class="block1122 blocklast hidden">
-      <div>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/ss_cec7ea5e83407dba51c80d24a2c8076e93752d4f.1920x1080.jpg?t=1681115546" alt="">
-        <button onclick="openNext('11221')">Pubg</button>
-      </div>
-      <div>
-        <img src="https://upload.wikimedia.org/wikipedia/ru/4/41/Codbox.jpg" alt="">
-        <button onclick="openNext('11222')">Call of Duty</button>
-      </div>
-    </div>
-    <div class="block1211 blocklast hidden">
-      <div>
-        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota2_social.jpg" alt="">
-        <button onclick="openNext('12111')">Dota 2</button>
-      </div>
-      <div>
-        <img src="https://cdn.iz.ru/sites/default/files/styles/900x506/public/article-2023-01/2_9.jpeg.jpg?itok=Wj0HvoKN" alt="">
-        <button onclick="openNext('12112')">Last of Us</button>
-      </div>
-    </div>
-    <div class="block1212 blocklast hidden">
-      <div>
-        <img src="https://ixbt.online/live/images/original/16/77/13/2022/02/10/7cc5beee03.jpg" alt="">
-        <button onclick="openNext('12121')">Mortal Kombat</button>
-      </div>
-      <div>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/221100/capsule_616x353.jpg?t=1674143992" alt="">
-        <button onclick="openNext('12122')">Day Z</button>
-      </div>
-    </div>
-    <div class="block1221 blocklast hidden">
-      <div>
-        <img src="https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg" alt="">
-        <button onclick="openNext('12211')">Minecraft</button>
-      </div>
-      <div>
-        <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SidMeiersCivilizationVI_image1600w.jpg" alt="">
-        <button onclick="openNext('12212')">Civilization</button>
-      </div>
-    </div>
-    <div class="block1222 blocklast hidden">
-      <div>
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/ss_d196d945c6170e9cadaf67a6dea675bd5fa7a046.1920x1080.jpg?t=1668125812" alt="">
-        <button onclick="openNext('12221')">CS GO</button>
-      </div>
-      <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rocket_League_coverart.jpg/640px-Rocket_League_coverart.jpg" alt="">
-        <button onclick="openNext('12222')">Rocket League</button>
-      </div>
+    <form class="block">
+      <h2>Какие жанры игры вы предпочитаете?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Какой возраст?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Какая платформа?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Какой бюджет?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Какие игры Вам понравились?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Уровень сложности?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Нужна сетевая игра?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Какие игры в тренде пользователей?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Ограничения компьютера по мощности?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNext(this)">
+    </form>
+    <form class="block hidden">
+      <h2>Новые или старые игры?</h2>
+      <input type="text" name="" id="" required>
+      <input type="submit" value="Ответить" onclick="openNextGenerate(this)">
+    </form>
+    <div class="block answer hidden">
+      <h2 class="title">Название игры</h2>
     </div>
     <script>
-      //create quiz openNext function
-      function openNext(id) {
-        if(id == '01') {
-          document.querySelector('.block00').classList.remove('hidden');
-          document.querySelector('.block0').classList.add('hidden');
-        }
-        if(id == '02') {
-          document.querySelector('.block00').classList.remove('hidden');
-          document.querySelector('.block0').classList.add('hidden');
-        }
-        if(id == '001') {
-          document.querySelector('.block1').classList.remove('hidden');
-          document.querySelector('.block00').classList.add('hidden');
-        }
-        if(id == '002') {
-          document.querySelector('.block1').classList.remove('hidden');
-          document.querySelector('.block00').classList.add('hidden');
-        }
-        if(id == '11') {
-          document.querySelector('.block11').classList.remove('hidden');
-          document.querySelector('.block1').classList.add('hidden');
-        }
-        if(id == '12') {
-          document.querySelector('.block12').classList.remove('hidden');
-          document.querySelector('.block1').classList.add('hidden');
-        }
-        if(id == '111') {
-          document.querySelector('.block111').classList.remove('hidden');
-          document.querySelector('.block11').classList.add('hidden');
-        }
-        if(id == '112') {
-          document.querySelector('.block112').classList.remove('hidden');
-          document.querySelector('.block11').classList.add('hidden');
-        }
-        if(id == '121') {
-          document.querySelector('.block121').classList.remove('hidden');
-          document.querySelector('.block12').classList.add('hidden');
-        }
-        if(id == '122') {
-          document.querySelector('.block122').classList.remove('hidden');
-          document.querySelector('.block12').classList.add('hidden');
-        }
-        if(id == '1111') {
-          document.querySelector('.block1111').classList.remove('hidden');
-          document.querySelector('.block111').classList.add('hidden');
-        }
-        if(id == '1112') {
-          document.querySelector('.block1112').classList.remove('hidden');
-          document.querySelector('.block111').classList.add('hidden');
-        }
-        if(id == '1121') {
-          document.querySelector('.block1121').classList.remove('hidden');
-          document.querySelector('.block112').classList.add('hidden');
-        }
-        if(id == '1122') {
-          document.querySelector('.block1122').classList.remove('hidden');
-          document.querySelector('.block112').classList.add('hidden');
-        }
-        if(id == '1211') {
-          document.querySelector('.block1211').classList.remove('hidden');
-          document.querySelector('.block121').classList.add('hidden');
-        }
-        if(id == '1212') {
-          document.querySelector('.block1212').classList.remove('hidden');
-          document.querySelector('.block121').classList.add('hidden');
-        }
-        if(id == '1221') {
-          document.querySelector('.block1221').classList.remove('hidden');
-          document.querySelector('.block122').classList.add('hidden');
-        }
-        if(id == '1222') {
-          document.querySelector('.block1222').classList.remove('hidden');
-          document.querySelector('.block122').classList.add('hidden');
-        }
-        if(id == '11111') {
-          //open link of game civilization
-          window.open('https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/');
-        }
-        if(id == '11112') {
-          //open link of game simcity
-          window.open('https://www.ea.com/games/simcity');
-        }
-        if(id == '11121') {
-          //open link of game minecraft
-          window.open('https://www.minecraft.net/ru-ru/');
-        }
-        if(id == '11122') {
-          //open link of game sims
-          window.open('https://www.ea.com/ru-ru/games/the-sims');
-        }
-        //Final Fantasy
-        //Ведьмак
-        //Pubg
-        //Call of Duty
-        //Dota 2
-        //Last of Us
-        //Mortal Kombat
-        //Day Z
-        //Minecraft
-
-        if(id == '11211') {
-          //open link of game final fantasy
-          window.open('https://www.finalfantasyxv.com/ru');
-        }
-        if(id == '11212') {
-          //open link of game witcher
-          window.open('https://thewitcher.com/ru/witcher3');
-        }
-        if(id == '11221') {
-          //open link of game pubg
-          window.open('https://www.pubg.com/ru/');
-        }
-        if(id == '11222') {
-          //open link of game call of duty
-          window.open('https://www.callofduty.com/ru/');
-        }
-        if(id == '12111') {
-          //open link of game dota 2
-          window.open('https://www.dota2.com/home');
-        }
-        if(id == '12112') {
-          //open link of game last of us
-          window.open('https://www.playstation.com/ru-ru/games/the-last-of-us-part-ii/');
-        }
-        if(id == '12121') {
-          //open link of game mortal kombat
-          window.open('https://www.mortalkombat.com/');
-        }
-        if(id == '12122') {
-          //open link of game day z
-          window.open('https://www.bohemia.net/games/dayz');
-        }
-        if(id == '12211') {
-          //open link of game minecraft
-          window.open('https://www.minecraft.net/ru-ru/');
-        }
-        //Civilization
-        //CS GO
-        //Rocket League
-        if(id == '12212') {
-          //open link of game civilization
-          window.open('https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/');
-        }
-        if(id == '12221') {
-          //open link of game cs go
-          window.open('https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/');
-        }
-        if(id == '12222') {
-          //open link of game rocket league
-          window.open('https://www.rocketleague.com/');
-        }
-
-
+      function openNext(el) {
+        el.parentNode.classList.add('hidden');
+        el.parentNode.nextElementSibling.classList.remove('hidden');
       }
+      
+// Super Mario Galaxy 2
+// The Legend of Zelda: Breath of the Wild
+// Red Dead Redemption 2 
+// Grand Theft Auto V 
+// Super Mario Odyssey 
+// Mass Effect 2 
+// The Elder Scrolls V: Skyrim 
+// The Last of Us 
+// Counter Strike: Global Offensive 
+// Dota 2
+// Portal 2
+// God of War
+// Batman: Arkham City
+// The Legend of Zelda: Ocarina of time 3D
+// BioShock Infinite
+// Pac-Man Championship Edition DX 
+// Divinity: Original Sin II
+// ainbow six siege
+// Starcraft II: Wings of Liberty
+// Persona 4 Golden 
+// PUBG: BATTLEGROUNDS
+// rocket league
+// Metal Gear Solid V: The Phantom Pain 
+// Apex Legends
+// Rock Band 3 
+// Uncharted 4
+// Super Smash Bros
+// INSIDE
+// Forza Horizon 4
+// God of War III 
+// Roblox
+// Bloodborne
+// Celeste
+// Super Street Fighter IV
+// The Witcher 3: Wild Hunt 
+// Undertale
+// Fire Emblem: Awakening
+// Divinity: Original Sin II - Definitive Edition
+// VALORANT
+// Journey
+// Xenoblade Chronicles
+// Mario Kart 8 Deluxe
+// The ICO & Shadow of the Colossus Collection
+// Minecraft
+// LittleBigPlanet 2
+// Overwatch
+// Bayonetta 2
+// Resident Evil 2
+// Final Fantasy XIV: Shadowbringers 
+// Ведьмак 3
+// The Legend of Zelda: A Link Between Worlds
+function openNextGenerate(el) {
+  el.parentNode.classList.add('hidden');
+  el.parentNode.nextElementSibling.classList.remove('hidden');
+  let games = ['Super Mario Galaxy 2','The Legend of Zelda: Breath of the Wild','Red Dead Redemption 2 ','Grand Theft Auto V ','Super Mario Odyssey ','Mass Effect 2 ','The Elder Scrolls V: Skyrim ','The Last of Us ','Counter Strike: Global Offensive ','Dota 2','Portal 2','God of War','Batman: Arkham City','The Legend of Zelda: Ocarina of time 3D','BioShock Infinite','Pac-Man Championship Edition DX ','Divinity: Original Sin II','ainbow six siege','Starcraft II: Wings of Liberty','Persona 4 Golden ','PUBG: BATTLEGROUNDS','rocket league','Metal Gear Solid V: The Phantom Pain ','Apex Legends','Rock Band 3 ','Uncharted 4','Super Smash Bros','INSIDE','Forza Horizon 4','God of War III ','Roblox','Bloodborne','Celeste','Super Street Fighter IV','The Witcher 3: Wild Hunt ','Undertale','Fire Emblem: Awakening','Divinity: Original Sin II - Definitive Edition','VALORANT','Journey','Xenoblade Chronicles','Mario Kart 8 Deluxe','The ICO & Shadow of the Colossus Collection','Minecraft','LittleBigPlanet 2','Overwatch','Bayonetta 2','Resident Evil 2','Final Fantasy XIV: Shadowbringers ','Ведьмак 3','The Legend of Zelda: A Link Between Worlds]'];
+// randomly generate a game from the games
+let game = games[Math.floor(Math.random() * games.length)];
+console.log(game);
+// get the title
+let title = document.querySelector('.title');
+// set the title
+title.innerHTML = game;
 
+
+
+
+}
     </script>
   </body>
 </html>
-        
