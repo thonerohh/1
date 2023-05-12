@@ -44,10 +44,10 @@
         position: relative;
       }
       .block h2 {
-        margin: 0;
+        margin: 0 0 32px;
       }
       .block button {
-        margin: 10px;
+        margin: 40px;
         padding: 10px;
         border: none;
         border-radius: 5px;
@@ -59,74 +59,84 @@
     </style>
     <form class="block" onsubmit="event.preventDefault()" method="GET">
       <h2>Какие жанры игры вы предпочитаете?</h2>
-      <button onclick="openNextGenerate(this)">экшн</button>
-      <button onclick="openNextGenerate(this)">шутер</button>
-      <button onclick="openNextGenerate(this)">рпг</button>
-      <button onclick="openNextGenerate(this)">стратегия </button>
-      <button onclick="openNextGenerate(this)">симулятор </button>
-      <button onclick="openNextGenerate(this)">инди </button>
-      <button onclick="openNextGenerate(this)">фантастика </button>
+      
+      <label for="a1"><input type="radio" name="i" id="a1">экшн</label>
+      <label for="a2"><input type="radio" name="i" id="a2">шутер</label>
+      <label for="a3"><input type="radio" name="i" id="a3">рпг</label>
+      <label for="a4"><input type="radio" name="i" id="a4">стратегия </label>
+      <label for="a5"><input type="radio" name="i" id="a5">симулятор </label>
+      <label for="a6"><input type="radio" name="i" id="a6">инди </label>
+      <label for="a7"><input type="radio" name="i" id="a7">фантастика </label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой возраст?</h2>
-      <button onclick="openNextGenerate(this)">меньше 18</button>
-      <button onclick="openNextGenerate(this)">больше 18</button>
+      <label for="b1"><input type="radio" name="h" id="b1">меньше 18</label>
+      <label for="b2"><input type="radio" name="h" id="b2">больше 18</label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какая платформа?</h2>
-      <button onclick="openNextGenerate(this)">компьютер </button>
-      <button onclick="openNextGenerate(this)">PlayStation</button>
-      <button onclick="openNextGenerate(this)">XboX</button>
-      <button onclick="openNextGenerate(this)">Nintendo Switch</button>
+      <label for="c3"><input type="radio" name="g" id="c3">компьютер </label>
+      <label for="c4"><input type="radio" name="g" id="c4">PlayStation</label>
+      <label for="c5"><input type="radio" name="g" id="c5">XboX</label>
+      <label for="c6"><input type="radio" name="g" id="c6">Nintendo Switch</label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой бюджет?</h2>
-      <button onclick="openNextGenerate(this)">100 рублей и меньше </button>
-      <button onclick="openNextGenerate(this)">500 рублей и меньше </button>
-      <button onclick="openNextGenerate(this)">1000 рублей и меньше </button>
-      <button onclick="openNextGenerate(this)">2000 рублей и меньше </button>
-      <button onclick="openNextGenerate(this)">неограниченный </button>
+      <label for="e7"><input type="radio" name="f" id="e7">100 рублей и меньше </label>
+      <label for="e8"><input type="radio" name="f" id="e8">500 рублей и меньше </label>
+      <label for="e9"><input type="radio" name="f" id="e9">1000 рублей и меньше </label>
+      <label for="e10"><input type="radio" name="f" id="e10">2000 рублей и меньше </label>
+      <label for="e11"><input type="radio" name="f" id="e11">неограниченный </label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какие игры Вам понравились?</h2>
-      <button onclick="openNextGenerate(this)">Counter Strike: Global Offensive</button>
-      <button onclick="openNextGenerate(this)">Dota 2</button>
-      <button onclick="openNextGenerate(this)">Rocket League</button>
-      <button onclick="openNextGenerate(this)">Minecraft</button>
-      <button onclick="openNextGenerate(this)">Rainbow six siege</button>
-      <button onclick="openNextGenerate(this)">Sims</button>
-      <button onclick="openNextGenerate(this)">The Legend of zelda</button>
-      <button onclick="openNextGenerate(this)">the Last of Us</button>
-      <button onclick="openNextGenerate(this)">другие игры</button>
+      <label for="d12"><input type="checkbox" name="e" id="d12">Counter Strike: Global Offensive</label>
+      <label for="d13"><input type="checkbox" name="e" id="d13">Dota 2</label>
+      <label for="d14"><input type="checkbox" name="e" id="d14">Rocket League</label>
+      <label for="d15"><input type="checkbox" name="e" id="d15">Minecraft</label>
+      <label for="d16"><input type="checkbox" name="e" id="d16">Rainbow six siege</label>
+      <label for="d17"><input type="checkbox" name="e" id="d17">Sims</label>
+      <label for="d18"><input type="checkbox" name="e" id="d18">The Legend of zelda</label>
+      <label for="d19"><input type="checkbox" name="e" id="d19">the Last of Us</label>
+      <label for="d20"><input type="checkbox" name="e" id="d20">другие игры </label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Уровень сложности?</h2>
-      <button onclick="openNextGenerate(this)">Простой</button>
-      <button onclick="openNextGenerate(this)">Средний</button>
-      <button onclick="openNextGenerate(this)">Сложный</button>
+      <label for="f21"><input type="radio" name="d" id="f21">простой </label>
+      <label for="f22"><input type="radio" name="d" id="f22">средний </label>
+      <label for="f23"><input type="radio" name="d" id="f23">сложный </label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Нужна сетевая игра?</h2>
-      <button onclick="openNextGenerate(this)">Да</button>
-      <button onclick="openNextGenerate(this)">Нет</button>
+      <label for="g24"><input type="radio" name="c" id="g24">да</label>
+      <label for="g25"><input type="radio" name="c" id="g25">нет</label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Ограничения компьютера по мощности?</h2>
-      <button onclick="openNextGenerate(this)">Есть</button>
-      <button onclick="openNextGenerate(this)">Нет</button>
+      <label for="h26"><input type="radio" name="b" id="h26">есть </label>
+      <label for="h27"><input type="radio" name="b" id="h27">нет</label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Новые или старые игры?</h2>
-      <button onclick="openNextGenerate(this)">Новые</button>
-      <button onclick="openNextGenerate(this)">Старые</button>
+      <label for="i28"><input type="radio" name="a" id="i28">новые</label>
+      <label for="i29"><input type="radio" name="a" id="i29">старые</label>
+      <button onclick="openNextGenerate(this)">Отправить</button>
     </form>
     <div class="block answer hidden">
       <h2 class="title">Название игры</h2>
