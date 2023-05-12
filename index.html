@@ -40,65 +40,93 @@
         height: 50px;
         cursor: pointer;
       }
+      .block {
+        position: relative;
+      }
+      .block h2 {
+        margin: 0;
+      }
+      .block button {
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        min-width: 200px;
+      }
     </style>
     <form class="block" onsubmit="event.preventDefault()" method="GET">
       <h2>Какие жанры игры вы предпочитаете?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">экшн</button>
+      <button onclick="openNextGenerate(this)">шутер</button>
+      <button onclick="openNextGenerate(this)">рпг</button>
+      <button onclick="openNextGenerate(this)">стратегия </button>
+      <button onclick="openNextGenerate(this)">симулятор </button>
+      <button onclick="openNextGenerate(this)">инди </button>
+      <button onclick="openNextGenerate(this)">фантастика </button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой возраст?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">меньше 18</button>
+      <button onclick="openNextGenerate(this)">больше 18</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какая платформа?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">компьютер </button>
+      <button onclick="openNextGenerate(this)">PlayStation</button>
+      <button onclick="openNextGenerate(this)">XboX</button>
+      <button onclick="openNextGenerate(this)">Nintendo Switch</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какой бюджет?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">100 рублей и меньше </button>
+      <button onclick="openNextGenerate(this)">500 рублей и меньше </button>
+      <button onclick="openNextGenerate(this)">1000 рублей и меньше </button>
+      <button onclick="openNextGenerate(this)">2000 рублей и меньше </button>
+      <button onclick="openNextGenerate(this)">неограниченный </button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Какие игры Вам понравились?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">Counter Strike: Global Offensive</button>
+      <button onclick="openNextGenerate(this)">Dota 2</button>
+      <button onclick="openNextGenerate(this)">Rocket League</button>
+      <button onclick="openNextGenerate(this)">Minecraft</button>
+      <button onclick="openNextGenerate(this)">Rainbow six siege</button>
+      <button onclick="openNextGenerate(this)">Sims</button>
+      <button onclick="openNextGenerate(this)">The Legend of zelda</button>
+      <button onclick="openNextGenerate(this)">the Last of Us</button>
+      <button onclick="openNextGenerate(this)">другие игры</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Уровень сложности?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">Простой</button>
+      <button onclick="openNextGenerate(this)">Средний</button>
+      <button onclick="openNextGenerate(this)">Сложный</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Нужна сетевая игра?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
-    </form>
-    <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
-      <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
-      <h2>Какие игры в тренде пользователей?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">Да</button>
+      <button onclick="openNextGenerate(this)">Нет</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Ограничения компьютера по мощности?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNext(this)">
+      <button onclick="openNextGenerate(this)">Есть</button>
+      <button onclick="openNextGenerate(this)">Нет</button>
     </form>
     <form class="block hidden" onsubmit="event.preventDefault()" method="GET">
       <img src="https://rohh.ru/i/arrow-left.svg" alt="" class="back" onclick="openPrevious(this)">
       <h2>Новые или старые игры?</h2>
-      <input type="text" name="" id="" required>
-      <input type="submit" value="Ответить" onclick="openNextGenerate(this)">
+      <button onclick="openNextGenerate(this)">Новые</button>
+      <button onclick="openNextGenerate(this)">Старые</button>
     </form>
     <div class="block answer hidden">
       <h2 class="title">Название игры</h2>
